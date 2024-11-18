@@ -1,18 +1,12 @@
 // invoke contract:
-TxScript  RaiseFund(token: CharityContract, amount: U256 ){
-
+TxScript RaiseFund(token: CharityContract, amount: U256 ){
     token.raiseFund(amount)
-    
 }
 
 TxScript DonateFunds(token: CharityContract, amount: U256){
-
     token.donateFunds(amount)
-
 }
 
 TxScript SpendFund(token: CharityContract,amount: U256) {
-
-    token.spendFund(amount)
-    
+    token.spendFund(amount) 
 }

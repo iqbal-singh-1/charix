@@ -23,9 +23,8 @@ Contract CharityContract(mut totalFundsCollected: U256, mut fundRaised: U256,mut
     }
 
     // Function to donate funds to the charity
-    @using(checkExternalCaller = false , updateFields = true, preapprovedAssets = true,payToContractOnly = true)
+    @using(checkExternalCaller = false , updateFields = true, preapprovedAssets = true, payToContractOnly = true)
     pub fn donateFunds(amount: U256) -> Bool {
-
         transferTokenToSelf!(callerAddress!(), selfTokenId!(), amount)
         donationRecords[callerAddress!()] = donationRecords[callerAddress!()] + amount // Update the donation record for the caller
         totalFundsCollected = totalFundsCollected + amount // Update total funds collected
