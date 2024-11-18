@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charix Fundraising</title>
+    <link rel="stylesheet" href="fundraising-styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Raise Funds for Charix Community</h1>
+            <p>Your donations help us make a difference!</p>
+        </header>
+
+        <div class="content-container">
+            <!-- Fundraising Section -->
+            <section class="fundraising">
+                <h2>Raise Funds</h2>
+                <form id="raiseFundForm" class="form-box">
+                    <div class="input-group">
+                        <label for="donationAmount">Amount to Donate</label>
+                        <input type="number" id="donationAmount" name="donationAmount" required placeholder="Enter amount to donate" step="0.01">
+                    </div>
+                    <button type="submit" class="btn">Donate</button>
+                </form>
+                <h3>Total Funds Raised: <span id="totalFunds">0</span> USD</h3>
+            </section>
+
+            <!-- Fund Spending Section -->
+            <section class="spending">
+                <h2>Report Fund Spending</h2>
+                <form id="spendFundForm" class="form-box">
+                    <div class="input-group">
+                        <label for="spendAmount">Amount Spent</label>
+                        <input type="number" id="spendAmount" name="spendAmount" required placeholder="Enter amount spent" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="spendDescription">Description</label>
+                        <input type="text" id="spendDescription" name="spendDescription" required placeholder="Where were the funds spent?">
+                    </div>
+                    <button type="submit" class="btn">Report Spending</button>
+                </form>
+
+                <h3>Funds Spent:</h3>
+                <ul id="spentFundsList"></ul>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Thank you for supporting Charix. Together, we make a bigger impact!</p>
+        </footer>
+    </div>
+
+    <script src="fundraising-script.js"></script>
+</body>
+</html>

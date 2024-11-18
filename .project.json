@@ -1,0 +1,21 @@
+{
+  "fullNodeVersion": "v3.8.5",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false,
+    "ignoreUnusedFunctionReturnWarnings": false,
+    "skipAbstractContractCheck": false
+  },
+  "infos": {
+    "CharityContract": {
+      "sourceFile": "CharityContract.ral",
+      "sourceCodeHash": "25f588332baf4031057dbc14fea04c61497f835c0fb3c85137e158bbe12954fa",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "79ae5676459c487b32af3fd4330884e24b57379d688611573a63042f4e8d0da7"
+    }
+  }
+}

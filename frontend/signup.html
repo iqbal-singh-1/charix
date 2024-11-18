@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Charix</title>
+    <link rel="stylesheet" href="signup-styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Section -->
+        <div class="top-section">
+            <h1>Welcome to Charix - Make a Difference!</h1>
+            <p>Your support helps make the world a better place. Sign up today to start contributing!</p>
+        </div>
+
+        <div class="content-container">
+            <!-- Left Content Area -->
+            <div class="left-content">
+                <h2>Join the Charix Community</h2>
+                <p>By signing up, you'll be joining thousands of people working towards positive change. Together, we can make a difference.</p>
+            </div>
+
+            <!-- Sign-up Form (Right Section) -->
+            <div class="form-container">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required placeholder="Choose a unique username">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Create a strong password">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Re-enter your password">
+                    </div>
+                    <button type="submit">Sign Up and Make a Difference</button>
+                </form>
+                <p id="error-message" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <p>By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <script src="signup-script.js"></script>
+</body>
+</html>

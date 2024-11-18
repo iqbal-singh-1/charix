@@ -1,0 +1,133 @@
+{
+  "version": "v3.8.5",
+  "name": "CharityContract",
+  "bytecode": "03064020402e403d408340dc40ea010001010110d39dcca591b4b2460d7ba00116002aa101a00016002aa1000302010000000103d34be8856da00002010000000105d30ef15ba9b2b1a50201070101011fd3b0ef71abb4b11600ac0c0d0d140a5f5f6d61705f5f305f5fb44744cb010116002a0c0e0c140a5f5f6d61705f5f305f5fb44744cb0102a00016002aa10003020101020201402bd3b073a029b4b2460d7ba000a00216012a340e7b0c0d0d140a5f5f6d61705f5f315f5f16004744cb010116012a0c0e0c140a5f5f6d61705f5f315f5f16004744cb0102a00216012aa1021600b11601ab0302010000000103d36c514c46a00202",
+  "codeHash": "79ae5676459c487b32af3fd4330884e24b57379d688611573a63042f4e8d0da7",
+  "fieldsSig": {
+    "names": [
+      "totalFundsCollected",
+      "fundRaised",
+      "fundsSpent"
+    ],
+    "types": [
+      "U256",
+      "U256",
+      "U256"
+    ],
+    "isMutable": [
+      true,
+      true,
+      true
+    ]
+  },
+  "eventsSig": [],
+  "functions": [
+    {
+      "name": "raiseFund",
+      "paramNames": [
+        "moneyRaised"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "Bool"
+      ]
+    },
+    {
+      "name": "displayTotalFundsCollected",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "displayTotalFundsLeft",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    },
+    {
+      "name": "donateFunds",
+      "paramNames": [
+        "donation"
+      ],
+      "paramTypes": [
+        "U256"
+      ],
+      "paramIsMutable": [
+        false
+      ],
+      "returnTypes": [
+        "Bool"
+      ]
+    },
+    {
+      "name": "spendFund",
+      "paramNames": [
+        "toAddress",
+        "amount"
+      ],
+      "paramTypes": [
+        "Address",
+        "U256"
+      ],
+      "paramIsMutable": [
+        false,
+        false
+      ],
+      "returnTypes": [
+        "Bool"
+      ]
+    },
+    {
+      "name": "trackFund",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": [
+        "U256"
+      ]
+    }
+  ],
+  "constants": [],
+  "enums": [
+    {
+      "name": "ErrorCodes",
+      "fields": [
+        {
+          "name": "ERROR_INVALID_OWNER",
+          "value": {
+            "type": "U256",
+            "value": "1"
+          }
+        },
+        {
+          "name": "ERROR_UNSUFFICIENT_FUNDS",
+          "value": {
+            "type": "U256",
+            "value": "2"
+          }
+        }
+      ]
+    }
+  ],
+  "mapsSig": {
+    "names": [
+      "donationRecords",
+      "fundsSpentRecords"
+    ],
+    "types": [
+      "Map[Address,U256]",
+      "Map[Address,U256]"
+    ]
+  }
+}

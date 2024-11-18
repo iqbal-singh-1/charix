@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@alephium/cli": "^1.8.5",
+    "@alephium/web3": "^1.8.5",
+    "dotenv": "^16.4.5"
+  }
+}

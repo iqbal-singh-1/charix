@@ -1,0 +1,69 @@
+Contract CharityContract(mut totalFundsCollected: U256, mut fundRaised: U256,mut fundsSpent: U256){
+
+    // Mapping to store donation records for each address
+    mapping[Address, U256] donationRecords
+    
+    // Mapping to track funds spent by the charity
+    mapping[Address, U256] fundsSpentRecords
+
+    enum ErrorCodes {
+        ERROR_INVALID_OWNER = 1
+        ERROR_UNSUFFICIENT_FUNDS = 2
+    }
+
+    // Function to raise funds (only accessible by the owner)
+    @using(updateFields = true, checkExternalCaller = false)
+    pub fn raiseFund(amount: U256) -> Bool {
+        assert!(callerAddress!()!=selfAddress!(), ErrorCodes.ERROR_INVALID_OWNER )
+
+        fundRaised = fundRaised + amount
+        totalFundsCollected = totalFundsCollected + amount // Update total funds collected
+
+        return true
+    }
+
+    // Function to donate funds to the charity
+    @using(checkExternalCaller = false , updateFields = true, preapprovedAssets = true,payToContractOnly = true)
+    pub fn donateFunds(amount: U256) -> Bool {
+
+        transferTokenToSelf!(callerAddress!(), selfTokenId!(), amount)
+        donationRecords[callerAddress!()] = donationRecords[callerAddress!()] + amount // Update the donation record for the caller
+        totalFundsCollected = totalFundsCollected + amount // Update total funds collected
+
+        return true
+    }
+
+
+    // Function to spend funds (only accessible by the owner)
+    @using(checkExternalCaller = false , updateFields = true, preapprovedAssets = true,assetsInContract = true)
+    pub fn spendFund(toAddress: Address, amount: U256) -> Bool{
+        assert!(callerAddress!()!=selfAddress!(), ErrorCodes.ERROR_INVALID_OWNER )
+        assert!(totalFundsCollected >= fundsSpent + amount, ErrorCodes.ERROR_UNSUFFICIENT_FUNDS)
+        
+        fundsSpentRecords[toAddress] = fundsSpentRecords[toAddress] + amount // Track the amount spent to the specific address
+        fundsSpent = fundsSpent + amount // Increment the total funds spent
+        transferTokenFromSelf!(toAddress, selfTokenId!(), amount) // Transfer tokens to the recipient address
+
+        return true
+    }
+
+    // Function to track the total amount of funds spent
+
+    @using(checkExternalCaller = false)
+    pub fn trackFund() -> U256 {
+        return fundsSpent
+    }
+
+    // Function to display the total funds collected
+    @using(checkExternalCaller = false)
+    pub fn displayTotalFundsCollected() -> U256 {
+        return totalFundsCollected
+    }
+
+    // Function to display the total funds left (based on remaining tokens)
+    @using(checkExternalCaller = false)
+    pub fn displayTotalFundsLeft() -> U256 {
+        return tokenRemaining!(selfAddress!(), selfTokenId!())
+    }
+}
+

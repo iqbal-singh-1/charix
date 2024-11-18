@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Charix</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Section -->
+        <div class="top-section">
+            <h1>Welcome Back to Charix!</h1>
+            <p>Log in to access your account, view your contributions, and make a greater impact.</p>
+        </div>
+
+        <div class="content-container">
+            <!-- Left Content Area -->
+            <div class="left-content">
+                <h2>Stay Connected with Charix</h2>
+                <p>Your actions can help create a lasting change in the world. Log in to stay engaged with your community!</p>
+            </div>
+
+            <!-- Login Form (Right Section) -->
+            <div class="form-container">
+                <h2>Log In</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+                    <button type="submit">Log In</button>
+                </form>
+                <p id="error-message" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <p>Don't have an account? <a href="signup.html">Sign up here</a> to join Charix!</p>
+        </div>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

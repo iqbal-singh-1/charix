@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page Container - A wrapper for the entire page */
+.page-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Top, content (middle), and bottom */
+    grid-template-columns: 1fr; /* Single column for responsiveness */
+    height: 100%;
+    width: 80%;
+}
+
+/* Top Section - Header */
+.top-section {
+    background-color: #333; /* Dark background */
+    padding: 20px;
+    text-align: center;
+}
+
+.top-section h1 {
+    font-size: 32px;
+    color: #ffd700; /* Gold accent */
+}
+
+.top-section p {
+    font-size: 16px;
+}
+
+/* Content Container for left and right sections */
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1 part for left content, 2 parts for form */
+    grid-gap: 30px;
+    padding: 20px;
+}
+
+/* Left Content Area */
+.left-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.left-content h2 {
+    color: #ffd700;
+    font-size: 24px;
+}
+
+.left-content p {
+    color: #d1d1d1;
+    line-height: 1.5;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #2a2a2a; /* Dark background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: #c1c1c1;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background-color: #3b3b3b;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff8c00; /* Gold accent color on focus */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8c00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6a00;
+}
+
+/* Bottom Section */
+.bottom-section {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.bottom-section p {
+    color: #d1d1d1;
+    font-size: 14px;
+}
+
+.bottom-section a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.bottom-section a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff3b30;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
