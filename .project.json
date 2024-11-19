@@ -13,9 +13,27 @@
   "infos": {
     "CharityContract": {
       "sourceFile": "CharityContract.ral",
-      "sourceCodeHash": "25f588332baf4031057dbc14fea04c61497f835c0fb3c85137e158bbe12954fa",
+      "sourceCodeHash": "1e774c77e073831c34192766236b69f3ff85c2a2d87188bbe8e81f7dfbaf4774",
       "bytecodeDebugPatch": "",
-      "codeHashDebug": "79ae5676459c487b32af3fd4330884e24b57379d688611573a63042f4e8d0da7"
+      "codeHashDebug": "f4da80aa5d8bbb85418ae6d74b32bda9cb9c84ee21f28febb2dadc636740a05a"
+    },
+    "DonateFunds": {
+      "sourceFile": "DonateFunds.ral",
+      "sourceCodeHash": "49391b7bc6da5b88b2098fbbd496c4668d07bd629c141c62b046c4d6f1bb3315",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "RaiseFund": {
+      "sourceFile": "RaiseFunds.ral",
+      "sourceCodeHash": "cb2b85e2d2b68544d08c00193f0bea4578efef2dda21dea02fa826690598fec3",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
+    },
+    "SpendFund": {
+      "sourceFile": "SpendFund.ral",
+      "sourceCodeHash": "247b0f1bf0634c4fa8df7f02829d35cd4637b5af948bdf1183ed5dc343845e7f",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": ""
     }
   }
 }

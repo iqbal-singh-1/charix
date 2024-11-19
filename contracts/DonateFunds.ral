@@ -1,0 +1,3 @@
+TxScript DonateFunds(token: CharityContract, tokenId: ByteVec, amount: U256){
+    let _ = token.donateFunds{callerAddress!() -> tokenId: amount}(amount)
+}

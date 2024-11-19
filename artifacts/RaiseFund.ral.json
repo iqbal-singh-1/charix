@@ -1,0 +1,28 @@
+{
+  "version": "v3.8.5",
+  "name": "RaiseFund",
+  "bytecodeTemplate": "01010300000006{1}0d0d{0}010018",
+  "fieldsSig": {
+    "names": [
+      "token",
+      "amount"
+    ],
+    "types": [
+      "CharityContract",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}

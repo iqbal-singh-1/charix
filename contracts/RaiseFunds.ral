@@ -1,0 +1,3 @@
+TxScript RaiseFund(token: CharityContract, amount: U256 ){
+    let _ = token.raiseFund(amount)
+}

@@ -46,8 +46,7 @@ Contract CharityContract(mut totalFundsCollected: U256, mut fundRaised: U256,mut
         return true
     }
 
-    // Function to track the total amount of funds spent
-
+    // Function to track the total amount of funds spen
     @using(checkExternalCaller = false)
     pub fn trackFund() -> U256 {
         return fundsSpent

@@ -1,0 +1,31 @@
+{
+  "version": "v3.8.5",
+  "name": "DonateFunds",
+  "bytecodeTemplate": "0101030000000ab4{1}{2}a3{2}0d0d{0}010118",
+  "fieldsSig": {
+    "names": [
+      "token",
+      "tokenId",
+      "amount"
+    ],
+    "types": [
+      "CharityContract",
+      "ByteVec",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}
